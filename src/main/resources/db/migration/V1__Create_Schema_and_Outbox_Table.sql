@@ -1,8 +1,5 @@
--- Criar schema pix_received_publisher
-CREATE SCHEMA IF NOT EXISTS pix_received_publisher;
-
--- Criar tabela outbox_events
-CREATE TABLE IF NOT EXISTS pix_received_publisher.outbox_events (
+-- Criar tabela outbox_events no schema public
+CREATE TABLE IF NOT EXISTS outbox_events (
     id UUID PRIMARY KEY,
     topico VARCHAR(100) NOT NULL,
     chave_particao VARCHAR(64) NOT NULL,
@@ -14,6 +11,6 @@ CREATE TABLE IF NOT EXISTS pix_received_publisher.outbox_events (
 );
 
 -- Criar índices para melhorar performance de consultas
-CREATE INDEX IF NOT EXISTS idx_outbox_status ON pix_received_publisher.outbox_events(status);
-CREATE INDEX IF NOT EXISTS idx_outbox_criado_em ON pix_received_publisher.outbox_events(criado_em);
-CREATE INDEX IF NOT EXISTS idx_outbox_tentativas ON pix_received_publisher.outbox_events(tentativas);
+CREATE INDEX IF NOT EXISTS idx_outbox_status ON outbox_events(status);
+CREATE INDEX IF NOT EXISTS idx_outbox_criado_em ON outbox_events(criado_em);
+CREATE INDEX IF NOT EXISTS idx_outbox_tentativas ON outbox_events(tentativas);

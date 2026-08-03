@@ -34,7 +34,7 @@ public class PixEventGenerator {
     @Value("${publisher.simulador.tick-ms:100}")
     private int tickMs;
 
-    @Value("${server.port:8081}")
+    @Value("${server.port:8080}")
     private int serverPort;
 
     @Value("${publisher.simulador.cobranca-service-url:http://localhost:8082}")

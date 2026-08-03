@@ -63,7 +63,7 @@ services:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/pixdb
       SPRING_DATASOURCE_USERNAME: pixuser
       SPRING_DATASOURCE_PASSWORD: pixpass
-      SPRING_JPA_HIBERNATE_DDL_AUTO: validate
+      SPRING_JPA_HIBERNATE_DDL_AUTO: none
       SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:29092
       SPRING_PROFILES_ACTIVE: prod
       server.port: 8080

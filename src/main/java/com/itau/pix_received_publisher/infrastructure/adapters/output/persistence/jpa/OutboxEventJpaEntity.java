@@ -7,7 +7,7 @@ import java.time.Instant;
 import java.util.UUID;
 
 @Entity
-@Table(name = "outbox_events")
+@Table(name = "outbox_events", schema = "pix_received_publisher")
 public class OutboxEventJpaEntity {
 
     @Id
